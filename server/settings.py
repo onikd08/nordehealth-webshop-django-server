@@ -101,7 +101,8 @@ DATABASES = {
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3001',
-    'https://nordhealth-webshop.web.app'
+    'https://nordhealth-webshop.web.app',
+    'http://localhost:3000'
 ]
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
