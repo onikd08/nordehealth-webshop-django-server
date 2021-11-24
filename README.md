@@ -1,5 +1,7 @@
 1. Clone the server from github
 git clone git@github.com:onikd08/nordehealth-webshop-django-server.git
+or
+extract zip file name server
 
 2. create and start virtual env
 virtualenv env --no-site-packages
@@ -33,4 +35,7 @@ python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver
 
-8. open http://127.0.0.1:8000/api/ on your browser to view the app.
+8. open http://127.0.0.1:8000/api/ on your browser to view the server app.
+
+9. Now go to https://nordhealth-webshop.web.app/ 
+you should see the client app running.
