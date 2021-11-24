@@ -17,7 +17,7 @@ else:
             'ENGINE': 'django.db.backends.mysql',
             'NAME': 'db-name',
             'USER': 'user-name',
-            'PASSWORD': 'user-pass',
+            'PASSWORD': 'user-password',
             'HOST': '127.0.0.1',
             'PORT': 'port-number'
         }
