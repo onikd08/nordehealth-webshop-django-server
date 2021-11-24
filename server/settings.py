@@ -90,23 +90,14 @@ WSGI_APPLICATION = 'server.wsgi.application'
 
 pymysql.install_as_MySQLdb()
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'webshop_product_db',
-#         'USER': env('DATABASE_USER'),
-#         'PASSWORD': env('DATABASE_PASS'),
-#         'HOST': '127.0.0.1',
-#         'PORT': '3306'
-#     }
-# }
 
 DATABASES = {}
 
 if DEBUG == False:
     DATABASES['default'] = dj_database_url.config(
         conn_max_age=600, ssl_require=True)
-    DATABASES['default'] = dj_database_url.config(env('CLEARDB_DATABASE_URL'))
+    DATABASES['default'] = dj_database_url.config(
+        'mysql://ba3d365dcc16ae:5f015c8c@us-cdbr-east-04.cleardb.com/heroku_2c8f58a7c3f4387?reconnect=true')
 else:
     DATABASES = {
         'default': {
@@ -119,7 +110,6 @@ else:
         }
     }
 
-print(DATABASES)
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3001',
